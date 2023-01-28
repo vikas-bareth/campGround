@@ -4,7 +4,7 @@ const {places, descriptors} = require('./seedHelper')
 const cities = require('./cities')
 const axios = require('axios');
 
-mongoose.connect('mongodb://localhost:27017/campingGrounds',{
+mongoose.connect('mongodb://127.0.0.1:27017/campingGrounds',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -41,6 +41,7 @@ const seedDB = async () => {
         const random1000 = Math.floor(Math.random() * 1000);
         const randomPrice = Math.floor(10 + Math.random()* 20)
         const camp = new Campground({
+            author:'63d4d2c323862b3dc56bc7eb',
             imageUrl: await seedImg(),
         location:`${cities[random1000].city}, ${cities[random1000].state} `,
         title:`${sample(descriptors)}, ${sample(places)}`,

@@ -25,7 +25,7 @@ const userRoutes = require('./routes/users')
 
 
 //Database Connect
-mongoose.connect('mongodb://localhost:27017/campingGrounds',{
+mongoose.connect('mongodb://127.0.0.1:27017/campingGrounds',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
