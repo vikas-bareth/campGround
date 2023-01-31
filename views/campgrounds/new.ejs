@@ -2,7 +2,7 @@
     <div class="row">
         <h1 class="text-center mb-3">New Campground</h1>
         <div class="col-6 offset-3">
-        <form class="mb-3 needs-validation" action="/campgrounds" method="POST" novalidate>
+        <form class="mb-3 needs-validation" action="/campgrounds" method="POST" novalidate enctype="multipart/form-data">
 
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="title" placeholder="enter title" name="campground[title]" required>
@@ -15,20 +15,21 @@
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="location" placeholder="enter location" name="campground[location]" required>
                 <div class="valid-feedback">
-      Looks good!
-    </div>
+                     Looks good!
+                    </div>
 
                 <label for="location">Location</label>
+            </div>
+
+            <div class="mb-3">
+              <input type="file" name="image" id="" multiple>
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
                 <div class="form-floating">
                     <input type="number" class="form-control" id="price" placeholder="price" name="campground[price]" required>
-                    
-
                     <label for="price">Campground Price</label>
-                    
                   </div>
                 <span class="input-group-text">.00</span>
                 <div class="valid-feedback">
@@ -40,25 +41,25 @@
             <div class="form-floating mb-3">
                 <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height: 100px" name="campground[description]" required></textarea>
                 <div class="valid-feedback">
-      Looks good!
-    </div>
+              Looks good!
+            </div>
 
                 <label for="description">Description</label>
               </div>
-
+<!-- 
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="imgurl" placeholder="enter img-url" name="campground[imageUrl]" required>
                 <div class="valid-feedback">
-      Looks good!
-    </div>
+              Looks good!
+            </div>
 
                 <label for="imgurl">Image Url</label>
-            </div>
+            </div> -->
             <div class="mb-3">
 
                 <button class="btn btn-success">Add Campground</button>
             </div>
-        </form>
+      </form>
         <a href="/campgrounds">All Campgrounds</a>
     </div>
 
